@@ -1,0 +1,24 @@
+services:
+  admin_postgres_db:
+    image: postgres:17
+    container_name: admin_postgres_users_platform
+    restart: always
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: test22
+      POSTGRES_DB: users_platform
+    ports:
+      - '5432:5432'
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 5s
+      timeout: 10s
+      retries: 3
+      start_period: 30s  
+    volumes:
+      - admin_postgres_data_users_platform:/var/lib/postgresql/data
+
+volumes:
+  admin_postgres_data_users_platform:
+
+
