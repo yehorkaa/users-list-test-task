@@ -25,6 +25,10 @@ Also it would be better to create public API for creating users but for simplici
 
 Frontend
 
+
+https://github.com/user-attachments/assets/eed6b20a-2075-4d54-9e7e-73c99d3cd96e
+
+
 How to set up project:
 	1.	use pnpm install to install all dependencies in the root directory “users-platform”
 	2.	To make it simple, I’ve added fallbacks for env variables so you don’t need to add .env file
